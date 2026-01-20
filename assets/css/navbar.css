@@ -1,0 +1,15 @@
+/* =====================================
+   NAVBAR – LOGO
+   ===================================== */
+
+.navbar-logo{
+  height: 34px;        /* desktop */
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 767px){
+  .navbar-logo{
+    height: 28px;      /* mobile */
+  }
+}

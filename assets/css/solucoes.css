@@ -1,0 +1,201 @@
+/* =====================================
+   SOLUÇÕES – AJUSTE PREMIUM
+   ===================================== */
+
+.section-solucoes{
+  position: relative;
+}
+
+/* CTA um pouco mais “premium” */
+.btn-solucoes-cta{
+  border-radius: 14px;
+  padding: 10px 16px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.25);
+}
+
+/* Card base (sem quebrar o card-soft) */
+.card-solution{
+  position: relative;
+  border-radius: 18px;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease,
+    border-color .25s ease,
+    background .25s ease;
+}
+
+/* hover com “lift” e brilho */
+.card-solution:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 20px 55px rgba(0,0,0,.45);
+}
+
+/* ícone: fundo e tamanho consistentes */
+.card-solution .feature-icon{
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 14px;
+
+  background: rgba(80,140,255,.14);
+  border: 1px solid rgba(80,140,255,.25);
+}
+
+/* ícone em si */
+.card-solution .feature-icon i{
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Título mais forte */
+.card-solution .card-title{
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+/* Texto com leitura melhor em fundo escuro */
+.card-solution .card-text{
+  margin-bottom: 0;
+}
+
+/* Card destacado (featured) */
+.card-solution--featured{
+  border-color: rgba(80,140,255,.55) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(80,140,255,.12),
+    rgba(255,255,255,.03)
+  ) !important;
+}
+
+.card-solution--featured .feature-icon{
+  background: rgba(80,140,255,.18);
+  border-color: rgba(80,140,255,.45);
+}
+
+/* Mobile: respiro e menos “peso” */
+@media (max-width: 767px){
+  .btn-solucoes-cta{
+    width: 100%;
+  }
+
+  .card-solution:hover{
+    transform: none; /* mobile não precisa “levitar” */
+  }
+}
+
+
+/* =====================================
+   SOLUCOES – FIX CONTRASTE + GLASS PREMIUM
+   ===================================== */
+
+#solucoes.section-solucoes{
+  position: relative;
+}
+
+/* Base do card (aproveita seu card-soft, mas “corrige” o visual) */
+#solucoes .card-soft{
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px !important;
+
+  background: rgba(255,255,255,.06) !important;
+  border: 1px solid rgba(255,255,255,.12) !important;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0 18px 50px rgba(0,0,0,.35);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+/* brilho suave no topo do card */
+#solucoes .card-soft::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(80,140,255,.18), transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(255,255,255,.10), transparent 55%);
+  opacity: .8;
+  pointer-events: none;
+}
+
+/* Conteúdo sempre acima do brilho */
+#solucoes .card-soft .card-body{
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover que “aparece” */
+#solucoes .card-soft:hover{
+  transform: translateY(-6px);
+  border-color: rgba(80,140,255,.38) !important;
+  box-shadow: 0 26px 70px rgba(0,0,0,.55);
+}
+
+/* Título e texto: resolver o apagado (o principal do seu print) */
+#solucoes .card-soft .card-title{
+  color: rgba(255,255,255,.92) !important;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+/* Mesmo se você estiver usando text-secondary, aqui fica legível */
+#solucoes .card-soft .card-text,
+#solucoes .card-soft .text-secondary{
+  color: rgba(255,255,255,.70) !important;
+}
+
+/* Ícone mais “premium” */
+#solucoes .feature-icon{
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(80,140,255,.12);
+  border: 1px solid rgba(80,140,255,.20);
+
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+  margin-bottom: 14px;
+}
+
+#solucoes .feature-icon i{
+  font-size: 1.2rem;
+  line-height: 1;
+  color: rgba(160,200,255,.95);
+}
+
+/* Card destaque (o do meio) – fica claramente “featured” */
+#solucoes .card-solution--featured,
+#solucoes .card-soft.card-solution--featured{
+  border-color: rgba(80,140,255,.55) !important;
+  background: rgba(80,140,255,.10) !important;
+}
+
+#solucoes .card-solution--featured::before{
+  opacity: 1;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(80,140,255,.30), transparent 60%),
+    radial-gradient(circle at 85% 10%, rgba(255,255,255,.12), transparent 60%);
+}
+
+/* CTA botão no topo mais alinhado com o tema */
+#solucoes .btn-solucoes-cta,
+#solucoes .btn.btn-primary{
+  border-radius: 14px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.35);
+}
+
+/* Mobile: sem “levitar” */
+@media (max-width: 767px){
+  #solucoes .card-soft:hover{
+    transform: none;
+  }
+}

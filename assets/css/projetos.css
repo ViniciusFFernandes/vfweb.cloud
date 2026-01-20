@@ -1,0 +1,306 @@
+/* =====================================
+   PROJETOS + PRICING (OTIMIZADO)
+   ===================================== */
+
+/* ===== Projetos: rodapé do card ERP com badge + botão ===== */
+.project-card__footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.project-badge{
+  background: rgba(0,0,0,.22) !important;
+  border: 1px solid rgba(255,255,255,.16) !important;
+  color: rgba(255,255,255,.88) !important;
+  font-weight: 600;
+}
+
+/* ===== Projetos: contraste / legibilidade ===== */
+#projetos .card-project{
+  background: rgba(255,255,255,.06) !important;
+  border: 1px solid rgba(255,255,255,.14) !important;
+}
+
+#projetos .card-project h5{
+  color: rgba(255,255,255,.96) !important;
+}
+
+#projetos .card-project :is(p, .text-secondary, .small, ul li){
+  color: rgba(255,255,255,.78) !important;
+}
+
+#projetos .card-project .bi-dot{
+  color: rgba(255,255,255,.45) !important;
+}
+
+#projetos .card-project .pill{
+  background: rgba(0,0,0,.18) !important;
+  border-color: rgba(255,255,255,.18) !important;
+  color: rgba(255,255,255,.90) !important;
+}
+
+#projetos .project-card__footer .btn{
+  color: #fff;
+}
+
+/* ===== Callout split (2 CTAs) ===== */
+.callout-split{
+  gap: 16px;
+}
+
+.callout-split__actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 575.98px){
+  .callout-split__actions .btn{ width: 100%; }
+}
+
+/* =====================================
+   PRICING (unificado: funciona para .price-card e .pricing-card)
+   ===================================== */
+
+:where(.price-card, .pricing-card){
+  border-radius: var(--vf-radius);
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.14));
+  box-shadow: 0 18px 60px rgba(0,0,0,.25);
+  mix-blend-mode: normal;
+}
+
+:where(.price-card, .pricing-card) *{
+  mix-blend-mode: normal;
+}
+
+/* card destaque */
+:where(.price-card, .pricing-card).is-featured,
+:where(.price-card, .pricing-card).price-card--featured{
+  background: linear-gradient(180deg, rgba(45,108,223,.18), rgba(0,0,0,.35));
+  border-color: rgba(45,108,223,.45);
+  box-shadow: 0 0 0 1px rgba(45,108,223,.25),
+              0 30px 80px rgba(0,0,0,.45);
+}
+
+/* badge do plano */
+.price-badge,
+.plan-badge{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  color: rgba(255,255,255,.82);
+  border-radius: 999px;
+  padding: .35rem .6rem;
+  font-weight: 600;
+}
+
+.price-badge--featured,
+.plan-badge.is-highlight{
+  background: rgba(45,108,223,.18);
+  border-color: rgba(45,108,223,.45);
+  color: #fff;
+}
+
+/* preço */
+.price-value{
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 10px;
+  line-height: 1;
+}
+
+.price-currency{
+  color: rgba(255,255,255,.72);
+  font-weight: 700;
+}
+
+.price-number{
+  font-size: 2.1rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.price-period{
+  color: rgba(255,255,255,.70);
+  font-weight: 700;
+}
+
+/* TÍTULO DO PLANO (fix principal) */
+:where(.price-card, .pricing-card) :is(h5, .plan-title){
+  color: rgba(255,255,255,.92) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+}
+
+:where(.price-card, .pricing-card).is-featured :is(h5, .plan-title),
+:where(.price-card, .pricing-card).price-card--featured :is(h5, .plan-title){
+  color: #fff !important;
+}
+
+/* texto e lista */
+:where(.price-card, .pricing-card) :is(.text-secondary, .plan-subtitle){
+  color: rgba(255,255,255,.72) !important;
+}
+
+:where(.price-card, .pricing-card) ul li{
+  color: rgba(255,255,255,.78);
+}
+
+:where(.price-card, .pricing-card) ul li i{
+  color: #6ea8ff;
+}
+
+/* nota */
+.pricing-note{
+  color: rgba(255,255,255,.65);
+  font-size: .85rem;
+}
+
+
+/* =====================================
+   PROJETOS + PRICING (PATCH FINAL)
+   cola no FINAL do CSS
+   ===================================== */
+
+/* ===== Projetos: rodapé do card ERP ===== */
+.project-card__footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.project-badge{
+  background: rgba(0,0,0,.22) !important;
+  border: 1px solid rgba(255,255,255,.16) !important;
+  color: rgba(255,255,255,.88) !important;
+  font-weight: 600;
+}
+
+/* ===== Callout split ===== */
+.callout-split{ gap:16px; }
+.callout-split__actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+@media (max-width:575.98px){
+  .callout-split__actions .btn{ width:100%; }
+}
+
+/* =====================================
+   PROJETOS – CONTRASTE / LEGIBILIDADE
+   ===================================== */
+#projetos .card-project{
+  background: rgba(255,255,255,.06) !important;
+  border-color: rgba(255,255,255,.14) !important;
+}
+
+#projetos .card-project h5{
+  color: rgba(255,255,255,.96) !important;
+}
+
+#projetos .card-project p,
+#projetos .card-project .text-secondary,
+#projetos .card-project .small,
+#projetos .card-project ul li{
+  color: rgba(255,255,255,.78) !important;
+}
+
+#projetos .card-project .bi-dot{
+  color: rgba(255,255,255,.45) !important;
+}
+
+#projetos .card-project .pill{
+  border-color: rgba(255,255,255,.18) !important;
+  color: rgba(255,255,255,.90) !important;
+  background: rgba(0,0,0,.18) !important;
+}
+
+/* =====================================
+   PRICING – FIX (cards laterais brancos)
+   ===================================== */
+
+/* Base do card (vale pra featured e normal) */
+.pricing-card.price-card{
+  border-radius: var(--vf-radius);
+  border: 1px solid rgba(255,255,255,.12);
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.14));
+  box-shadow: 0 18px 60px rgba(0,0,0,.25);
+  color: rgba(255,255,255,.90);
+}
+
+/* Se por acaso algum bg-white/bg-light escapar dentro do card */
+.pricing-card.price-card .bg-white,
+.pricing-card.price-card .bg-light,
+.pricing-card.price-card.bg-white,
+.pricing-card.price-card.bg-light{
+  background: transparent !important;
+}
+
+/* Textos base */
+.pricing-card.price-card .plan-title,
+.pricing-card.price-card h5{
+  color: rgba(255,255,255,.94) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+}
+
+.pricing-card.price-card .text-secondary{
+  color: rgba(255,255,255,.72) !important;
+}
+
+.pricing-card.price-card ul li{
+  color: rgba(255,255,255,.80) !important;
+}
+
+.pricing-card.price-card ul li i{
+  color: #6ea8ff;
+}
+
+/* Preço */
+.price-value{
+  display:flex;
+  align-items:baseline;
+  gap:6px;
+  margin-top:10px;
+  line-height:1;
+}
+.price-currency{ color: rgba(255,255,255,.72); font-weight:700; }
+.price-number{ color:#fff; font-size:2.1rem; font-weight:900; letter-spacing:-0.02em; }
+.price-period{ color: rgba(255,255,255,.70); font-weight:700; }
+
+/* Badges do topo */
+.plan-badge{
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: .35rem .6rem;
+}
+.plan-badge.is-highlight{
+  background: linear-gradient(135deg, #2d6cdf, #1f4fb0);
+  border-color: transparent;
+}
+
+/* Featured */
+.pricing-card.price-card.is-featured{
+  background: linear-gradient(180deg, rgba(45,108,223,.18), rgba(0,0,0,.35));
+  border-color: rgba(45,108,223,.45);
+  box-shadow: 0 0 0 1px rgba(45,108,223,.25),
+              0 30px 80px rgba(0,0,0,.45);
+}
+.pricing-card.price-card.is-featured *{
+  color: rgba(255,255,255,.98);
+}
+
+/* Nota final */
+.pricing-note{
+  color: rgba(255,255,255,.65);
+  font-size: .85rem;
+}
