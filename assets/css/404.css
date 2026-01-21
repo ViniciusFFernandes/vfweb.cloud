@@ -1,0 +1,9 @@
+body {
+  background:
+    radial-gradient(circle at 30% 20%, rgba(45,108,223,.18), transparent 60%),
+    #0b1220;
+}
+
+section {
+  backdrop-filter: blur(6px);
+}
