@@ -1,9 +1,60 @@
-body {
+/* Fundo (mantém o estilo do site) */
+body{
   background:
     radial-gradient(circle at 30% 20%, rgba(45,108,223,.18), transparent 60%),
     #0b1220;
 }
 
-section {
-  backdrop-filter: blur(6px);
+/* Wrapper vira coluna e controla o rodapé */
+.error-content{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Área principal cresce e centraliza */
+.error-main{
+  flex: 1;                 /* isso é o que “empurra” a marca pra baixo */
+  padding: 64px 16px;
+}
+
+/* (Opcional) leve vidro só no conteúdo, não na página toda */
+.error-main .container{
+  max-width: 900px;
+}
+
+/* =========================
+   MARCA NO RODAPÉ
+   ========================= */
+.brand{
+  padding: 16px 0 22px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  gap: 10px;
+  opacity: .85;
+}
+
+/* Logo discreta e bonita em fundo escuro */
+.brand img{
+  width: 80px;
+  height: auto;
+  opacity: .3;
+  filter: grayscale(100%);
+  pointer-events: none;
+  user-select: none;
+  mix-blend-mode: normal;   /* evita “sumir”/ficar estranho */
+}
+
+/* Texto da marca */
+.brand-meta{
+  font-size: .85rem;
+  color: rgba(255,255,255,.55);
+}
+
+/* Ajuste responsivo */
+@media (min-width: 992px){
+  .error-main{ padding: 80px 16px; }
+  .brand img{ width: 100px; }
 }
